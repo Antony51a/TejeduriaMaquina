@@ -1,0 +1,378 @@
+   /* General */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background: url('imagen/Fon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Encabezado con imagen de fondo */
+.header {
+    width: 100vw;
+    height: 60vh;
+    background: url('imagen/Tejeduría\ a\ Maquina.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 4rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Secciones */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+/* Introducción Section */
+#introduccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* Imágenes laterales */
+.side-image {
+    width: 400px;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Espacio entre las imágenes y el texto */
+}
+
+.side-image:hover {
+    transform: scale(1.1);
+}
+
+/* Imagen central */
+.main-image {
+    width: 1000px;
+    max-width: 100%;
+    margin-bottom: 20px; /* Añadido espacio entre la imagen central y el texto */
+}
+
+/* Texto debajo de la imagen central */
+.text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px; /* Espacio entre el texto y la imagen */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Introducción */
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Módulos */
+.modules-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+#modulos { 
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url('imagen/Mod.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#modulos h2 {
+    margin-bottom: 75px;
+    font-size: 60px;
+    margin-top: 80px;
+    -webkit-text-stroke: 1px white;
+
+}
+.module {
+    background: #f5f5f5;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.module:hover {
+    transform: translateY(-10px);
+    background: #e0f7fa;
+}
+
+.module h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #0099ff;
+}
+
+/* Contacto */
+.contact p {
+    margin: 10px 0;
+    font-size: 35px;
+    margin-bottom: 30px;
+
+}
+.contact h2{
+    margin-top: 76px;
+    font-size: 90px;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+.contact a {
+    color: #0099ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #0d9dd6;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    width: 100%;
+    height: 85px;
+}
+.footer p {
+    margin-top: 25px;
+}
+
+
+.carousel-container {
+    width: 100%;
+    max-width: 1000px; /* Ajusta el tamaño según tu diseño */
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel {
+    margin-top: 150px;
+    display: flex;
+    transition: transform 1s ease-in-out; 
+    margin-bottom: 150px;
+   
+}
+
+
+.carousel-slide {
+    border: 2px solid white;
+    min-width: 25%; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0; 
+    box-shadow: 0 0 25px white;
+}
+
+/* Pantallas grandes (Mayores a 2048px) */
+@media (min-width: 1148px) {
+    #introduccion {
+        justify-content: space-between; /* Imágenes a izquierda y derecha */
+        align-items: center;
+    }
+
+    .side-image {
+        position: absolute;
+        top: 50%; /* Centrado vertical */
+        transform: scale(1.2);
+    }
+
+    .side-image:first-child {
+        left: 80%; /* Imagen izquierda */
+    }
+
+    .side-image:last-child {
+        right: 80%; /* Imagen derecha */
+    }
+
+    .main-image {
+        width: 100%; /* Reduce el tamaño de la imagen central */
+        max-width: 900px;
+    }
+
+    .text {
+        width: 50%; /* Reduce el ancho del texto */
+    }
+}
+
+/* Pantallas medianas (Tablets) */
+@media (max-width: 1024px) {
+    .side-image {
+        width: 300px;
+    }
+
+    .main-image {
+        width: 80%;
+    }
+
+    .text {
+        width: 80%; /* Más espacio en tablets */
+    }
+}
+
+/* Pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    #introduccion {
+        flex-direction: column; /* Ordena verticalmente */
+        align-items: center; /* Centra el contenido */
+        gap: 10px;
+    }
+
+    .side-image {
+        width: 70%; /* Ajusta el tamaño */
+        margin-top: 10px;
+    }
+
+    .main-image {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .text {
+        width: 70%; /* Ocupa 70% del ancho */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+    }
+}
+
+/* Pantallas muy pequeñas (Móviles pequeños) */
+@media (max-width: 480px) {
+    #introduccion {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .side-image,
+    .main-image {
+        width: 90%; /* Más ancho */
+        margin-top: 5px;
+    }
+
+    .text {
+        width: 90%; /* Se expande más */
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .side-image {
+        width: 250px;
+    }
+
+    .main-image {
+        width: 450px;
+    }
+
+    .header h1 {
+        font-size: 3.5rem;
+    }
+
+    #introduccion {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .side-image {
+        width: 150px; /* Imágenes más pequeñas */
+    }
+
+    .main-image {
+        width: 300px;
+    }
+
+    .header {
+        height: 40vh;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #introduccion {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .side-image {
+        display: none; /* Ocultar imágenes laterales en móviles pequeños */
+    }
+
+    .main-image {
+        width: 250px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+}
